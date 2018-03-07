@@ -1,7 +1,7 @@
 {
-  "name": "diva-js-reference-3p-backend",
+  "name": "kpbackend",
   "version": "1.0.0",
-  "description": "A backend for a reference implementation that uses the Diva SDK to verify IRMA attributes.",
+  "description": "Ketenpartner backend",
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
@@ -23,21 +23,22 @@
   "contributors": [
     "Koen van Ingen",
     "Timen Olthof",
+    "Sietse Ringers",
     "Alliander N.V. (https://alliander.com/)"
   ],
   "license": "BSD-3-Clause",
   "dependencies": {
-    "cookie-encrypter": "0.2.3",
-    "cookie-parser": "1.4.3",
-    "diva-irma-js": "git+https://github.com/Alliander/diva-irma-js.git",
+    "axios": "0.17.0",
     "express": "4.16.1",
+    "promise-readable": "3.1.3",
     "qr-image": "3.2.0",
+    "ssh2-sftp-client": "2.0.1",
+    "stream-to-promise": "2.2.0",
     "superagent": "3.8.0",
+    "underscore": "1.8.3",
     "uuid": "3.1.0"
   },
   "devDependencies": {
-    "chai": "4.1.2",
-    "chai-as-promised": "7.1.1",
     "eslint": "4.8.0",
     "eslint-config-airbnb": "15.1.0",
     "eslint-plugin-import": "2.7.0",

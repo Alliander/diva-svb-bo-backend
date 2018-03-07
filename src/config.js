@@ -1,23 +1,11 @@
 const config = {
   port: process.env.PORT ? process.env.PORT : 4000,
-  cookieSecret: process.env.COOKIE_SECRET ? process.env.COOKIE_SECRET : 'StRoNGs3crE7',
-  cookieName: process.env.COOKIE_NAME ? process.env.COOKIE_NAME : 'diva-session',
-  cookieSettings: {
-    httpOnly: true,
-    maxAge: 300000,
-    sameSite: true,
-    signed: true,
-    secure: false, // TODO: NOTE: must be set to true and be used with HTTPS only!
-  },
   baseUrl: process.env.BASE_URL ? process.env.BASE_URL : 'http://localhost:4000',
-  apiKey: process.env.IRMA_API_SERVER_KEY ? process.env.IRMA_API_SERVER_KEY : 'FILL_IN',
-  irmaApiServerUrl: process.env.IRMA_API_SERVER_URL ? process.env.IRMA_API_SERVER_URL : 'http://localhost:8081/irma_api_server',
-  irmaApiServerPublicKey: process.env.IRMA_API_SERVER_PUBLIC_KEY ? process.env.IRMA_API_SERVER_PUBLIC_KEY : 'FILL_IN',
-  useRedis: process.env.USE_REDIS ? process.env.USE_REDIS : false,
-  redisHost: process.env.REDIS_HOST ? process.env.REDIS_HOST : 'localhost',
-  redisPort: process.env.REDIS_PORT ? process.env.REDIS_PORT : '6379',
-  redisPassword: process.env.REDIS_PASSWORD ? process.env.REDIS_PASSWORD : '',
-  bingMapsApiKey: process.env.BING_MAPS_API_KEY ? process.env.BING_MAPS_API_KEY : '',
+  irmaApiServerUrl: process.env.IRMA_API_SERVER_URL ? process.env.IRMA_API_SERVER_URL : 'https://demo.irmacard.org/tomcat/irma_api_server',
+  sftpHost: process.env.SFTP_HOST,
+  sftpUsername: process.env.SFTP_USERNAME,
+  sftpPassword: process.env.SFTP_PASSWORD,
+  sftpPath: process.env.SFTP_PATH,
 };
 
 module.exports = config;
