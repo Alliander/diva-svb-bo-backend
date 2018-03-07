@@ -1,0 +1,53 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: {appName}
+  namespace: {namespace}
+  labels:
+    app: {appName}
+spec:
+  revisionHistoryLimit: 0
+  replicas: 1
+  template:
+    metadata:
+      name: {appName}
+      labels:
+        app: {appName}
+    spec:
+      containers:
+      - name: {appName}
+        envFrom:
+        - configMapRef:
+            name: {appName}
+        env:
+        - name: SFTP_HOST
+          valueFrom:
+            secretKeyRef:
+              name: {appName}
+              key: SFTP_HOST
+        - name: SFTP_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: {appName}
+              key: SFTP_USERNAME
+        - name: SFTP_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: {appName}
+              key: SFTP_PASSWORD
+        - name: SFTP_PATH
+          valueFrom:
+            secretKeyRef:
+              name: {appName}
+              key: SFTP_PATH
+        image: {image}
+        resources:
+          limits:
+            cpu: 500m
+            memory: 1Gi
+          requests:
+            cpu: 100m
+            memory: 1Gi
+        ports:
+        - containerPort: 4000
+          protocol: TCP

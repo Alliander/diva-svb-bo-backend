@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {appName}
+  namespace: {namespace}
+  labels:
+    app: {appName}
+data:
+  BASE_URL: "https://svb-backoffice.appx.cloud"
+  IRMA_API_SERVER_URL: "https://demo.irmacard.org/tomcat/irma_api_server"
