@@ -28,7 +28,7 @@
   ],
   "license": "BSD-3-Clause",
   "dependencies": {
-    "axios": "0.17.0",
+    "axios": "0.18.1",
     "express": "4.16.1",
     "express-http-proxy": "1.1.0",
     "promise-readable": "3.1.3",
